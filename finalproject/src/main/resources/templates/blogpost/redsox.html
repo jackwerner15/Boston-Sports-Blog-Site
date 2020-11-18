@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  <div th:replace="fragments/styling :: headStyles"></div>
+  
+  
+
+</head>
+
+<body>
+  <style>
+    body {background-color: rgba(196, 65, 65, 0.733);}
+    </style>
+
+    
+
+
+  <div class="container">
+    <h1>Boston Sports Blog Site</h1>
+    <div th:replace="fragments/navbar :: navbar"></div>
+    <div class="media">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/RedSoxPrimary_HangingSocks.svg/1200px-RedSoxPrimary_HangingSocks.svg.png" class="mr-3" alt="..." height = "60" width = "60">
+        <div class="media-body">
+          <h5 class="mt-0">Boston Red Sox</h5>
+          Everything Boston Red Sox you can read about here:
+        </div>
+      </div>
+
+      <a th:href="@{/blogpost/new}">
+        <button class="btn btn-success">Create A Blog Post</button>
+      </a>
+
+      <div class="row d-flex justify-content-around">
+
+        <div th:each="blog:${posts}">
+          <div class="card col-md-6 p-0 mb-3" style="min-width: 18rem">
+  
+            <h4 class="card-header" th:text="${blog.title}"></h4>
+  
+            <div class="card-body">
+  
+              <p class="card-text" th:text="${blog.blogentry}"></p>
+              <p class="card-text" th:text="${blog.author}"></p>
+  
+            </div>
+  
+            <div class="card-footer">
+              <div class="form-group">
+                <a href="#" th:href="@{blogpost/edit/{id}(id=${blog.id})}" class="card-line btn btn-info">Edit Post</a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                  Delete Post
+                </button>
+  
+              </div>
+              </form>
+            </div>
+          </div>
+  
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this post?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h3 class="card-text" th:text="${blog.author}"></h3>
+                  <p class="card-text" th:text="${blog.blogentry}"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="#" th:href="@{blogpost/delete/{id}(id=${blog.id})}" class="card-link btn btn-danger">Delete
+                    Post</a>
+  
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- <a th:href="@{/blogpost/new}">
+          <button class="btn btn-primary">Create a new blog post</button>
+        </a> -->
+    </div>
+  
+  
+    <!-- Button trigger modal -->
+  
+  
+    <!-- Modal -->
+  
+  
+    <div th:replace="fragments/styling :: javascripts"></div>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+  </body>
+  
+</html>
