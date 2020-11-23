@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <div th:replace="fragments/styling :: headStyles"></div>
+    
+
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgba(6, 6, 226, 0.411);
+        }
+
+        img {
+            margin-top: 5px;
+            margin-bottom: 100px;
+            margin-right: 140px;
+            margin-left: 60px;
+        }
+        p.b {
+  font: italic bold 14px/31px Georgia, serif;
+}
+    </style>
+
+    <div class="container">
+        <div class="header" style="text-align: center;">
+            <h1>Boston Sports Blog Site</h1>
+            <p class = "b">Wicked good reads</p>
+        </div>
+        <div th:replace="fragments/navbar :: navbar"></div>
+        <div class="accordion" id="accordionExample" style= "margin-top: 10px">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Current Status
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    Record: 5-5 ... 
+                    3rd in AFC East
+                    
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Schedule
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <img src="https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/patriots/vup11skugp9effgvqawy" alt="" height="600" width="1000"
+                    class="center">
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Fire Me Up
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Cam Newton 
+                    <img src="https://hdliveextra-a.akamaihd.net/HD/image_sports/mobile/A0F5FB12-25FB-8FC6-EF45-98F4FB21DFB2_m59.jpg" alt="" height="600" width="1000"
+                    class="center">
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <table class="table table-hover table-dark"style= "margin-top: 30px">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+            </tbody>
+          </table> -->
+
+          
+       
+
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

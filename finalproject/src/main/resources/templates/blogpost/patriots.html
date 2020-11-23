@@ -15,16 +15,25 @@
 <body>
   <style>
     body {background-color: rgba(6, 6, 226, 0.411);}
+
+    p.b {
+  font: italic bold 14px/31px Georgia, serif;
+}
+
+   
     </style>
 
     
 
 
   <div class="container">
-    <h1>Boston Sports Blog Site</h1>
+    <div class = "header" style="text-align: center;">
+      <h1>Boston Sports Blog Site</h1>
+      <p class = "b">Wicked good reads</p>
+    </div>
     <div th:replace="fragments/navbar :: navbar"></div>
-    <div class="media">
-        <img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2b3b.png" class="mr-3" alt="..." height = "60" width = "60">
+    <div class="media" style= "margin-top: 10px">
+        <img src="http://1.bp.blogspot.com/-TvXEpU0ewzQ/VCCzfMfLUcI/AAAAAAAAEzI/r9B48E-eA44/s1600/Logo%2BNew%2BEngland%2BPatriots.png" class="mr-3" alt="..." height = "60" width = "60">
         <div class="media-body">
           <h5 class="mt-0">New England Patriots</h5>
           Everything New England Patriots you can read about here:
@@ -32,13 +41,13 @@
       </div>
 
       <a th:href="@{/blogpost/new}">
-        <button class="btn btn-success">Create A Blog Post</button>
+        <button class="btn btn-success" style= "margin-top: 10px">Create A Blog Post</button>
       </a>
 
-      <div class="row d-flex justify-content-around">
+      <div class="row d-flex justify-content-around" style= "margin-top: 10px">
 
         <div th:each="blog:${posts}">
-          <div class="card col-md-6 p-0 mb-3" style="min-width: 18rem">
+          <div class="card w-100" style="min-width: 18rem">
   
             <h4 class="card-header" th:text="${blog.title}"></h4>
   
@@ -51,7 +60,7 @@
   
             <div class="card-footer">
               <div class="form-group">
-                <a href="#" th:href="@{blogpost/edit/{id}(id=${blog.id})}" class="card-line btn btn-info">Edit Post</a>
+                <!-- <a href="#" th:href="@{blogpost/edit/{id}(id=${blog.id})}" class="card-line btn btn-info">Edit Post</a> -->
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                   Delete Post
                 </button>

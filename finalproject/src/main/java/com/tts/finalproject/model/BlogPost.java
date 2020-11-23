@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.Length;
+
 @Entity
 public class BlogPost {
 
@@ -13,15 +15,20 @@ public class BlogPost {
     private Long id;
     private String title;
     private String author;
+
+    @Length(max = 25000)
     private String blogentry;
+    private String typeof;
+
 
     public BlogPost() {
     }
 
-    public BlogPost(String title, String author, String blogentry) {
+    public BlogPost(String title, String author, String blogentry, String typeof) {
         this.title = title;
         this.author = author;
         this.blogentry = blogentry;
+        this.typeof = typeof;
     }
 
     public Long getId() {
@@ -53,9 +60,19 @@ public class BlogPost {
         this.blogentry = blogentry;
     }
 
+
+    public String getTypeof() {
+        return typeof;
+    }
+
+    public void setTypeof(String typeof) {
+        this.typeof = typeof;
+    }
+
     @Override
     public String toString() {
-        return "Blog [author=" + author + ", blogentry=" + blogentry + ", id=" + id + ", title=" + title + "]";
+        return "BlogPost [author=" + author + ", blogentry=" + blogentry + ", id=" + id + ", title=" + title
+                + ", typeof=" + typeof + "]";
     }
 
 

@@ -12,9 +12,24 @@
 
 <body>
 
+  <style>
+    body {
+        background-color:aliceblue;
+    }
 
-  <div class="container">
-    <h1>Boston Sports Blog Site</h1>
+    p.b {
+  font: italic bold 14px/31px Georgia, serif;
+}
+</style>
+
+
+  <div class="container" style = background-color:aliceblue;>
+    
+    <div class = "header" style="text-align: center; color:rgb(245, 35, 46); background-color: aliceblue;">
+      <h1>Boston Sports Blog Site</h1>
+      <p class = "b">Wicked good reads</p>
+    </div>
+    
     <div th:replace="fragments/navbar :: navbar"></div>
     <h3 class="mt-3">Choose your team:</h3>
 
@@ -33,7 +48,7 @@
             <a href="#!">
               <div class="text-white d-flex h-100 mask blue-gradient-rgba">
                 <div class="first-content align-self-center p-3">
-                  <h3 class="card-title" style="color:white">Patriots</h3>
+                  <h3 class="card-title"> <a th:href="@{/teampic/pats}" style="color:white">Patriots</a></h3>
                   <p class="lead mb-0"> <a th:href="@{/blogpost/patriots}" style="color:white;">
                     Click on this link to see blogs about the pats </a></p>
                 </div>
@@ -48,9 +63,9 @@
           
           <div class="card-body white">
             <div class="progress md-progress">
-              <div class="progress-bar purple lighten-2" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar purple lighten-2" role="progressbar" style="width: 43%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <p class="text-muted">Odds to win Division (55%)</p>
+            <p class="text-muted">Odds to win Division (43%)</p>
             <h4 class="text-uppercase font-weight-bold my-4">Details</h4>
             <p class="text-muted" align="justify">Blogs dedicated to the New England Patriots Football Team.</p>
           </div>
@@ -74,7 +89,7 @@
             <a href="#!">
               <div class="text-white d-flex h-100 mask purple-gradient-rgba">
                 <div class="first-content align-self-center p-3">
-                  <h3 class="card-title" style="color:white;">Red Sox</h3>
+                  <h3 class="card-title"> <a th:href="@{/teampic/sox}" style="color:white;">Red Sox</a></h3> 
                   <p class="lead mb-0"> <a th:href="@{/blogpost/redsox}" style="color:white;">Click on this link to see blogs about the sox </a></p>
                 </div>
                 <div class="second-content  align-self-center mx-auto text-center">
@@ -115,7 +130,7 @@
             <a href="#!">
               <div class="text-white d-flex h-100 mask peach-gradient-rgba">
                 <div class="first-content align-self-center p-3">
-                  <h3 class="card-title" style="color:black;">Bruins</h3>
+                  <h3 class="card-title"> <a th:href="@{/teampic/bs}"  style="color:black;">Bruins</a></h3>
                   <p class="lead mb-0"> <a th:href="@{/blogpost/bruins}" style="color:black;">Click on this link to see blogs about the B's</a></p>
                 </div>
                 <div class="second-content  align-self-center mx-auto text-center">
@@ -129,7 +144,7 @@
           <!-- Content -->
           <div class="card-body white animated">
             <div class="progress md-progress">
-              <div class="progress-bar amber darken-3" role="progressbar" style="width: 75%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar amber darken-3" role="progressbar" style="width: 70%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <p class="text-muted">Odds to win 2021 Stanley Cup (12-1)</p>
             <h4 class="text-uppercase font-weight-bold my-4">Details</h4>
@@ -154,7 +169,7 @@
             <a href="#!">
               <div class="text-white d-flex h-100 mask aqua-gradient-rgba">
                 <div class="first-content align-self-center p-3">
-                  <h3 class="card-title" style="color:black;">Celtics</h3>
+                  <h3 class="card-title"> <a th:href="@{/teampic/cs}" style="color:black;">Celtics</a></h3>
                   <p class="lead mb-0"> <a th:href="@{/blogpost/celtics}" style="color:black;">Click on this link to see blogs about the C's</a></p>
                 </div>
                 <div class="second-content  align-self-center mx-auto text-center">

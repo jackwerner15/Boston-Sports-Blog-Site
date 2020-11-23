@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <div th:replace="fragments/styling :: headStyles"></div>
+    
+
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgba(51, 136, 51, 0.678);
+        }
+
+        img {
+            margin-top: 5px;
+            margin-bottom: 100px;
+            margin-right: 140px;
+            margin-left: 60px;
+        }
+
+        p.b {
+  font: italic bold 14px/31px Georgia, serif;
+}
+    </style>
+
+    <div class="container">
+        <div class="header" style="text-align: center;">
+            <h1>Boston Sports Blog Site</h1>
+            <p class = "b">Wicked good reads</p>
+        </div>
+        <div th:replace="fragments/navbar :: navbar"></div>
+
+        <div class="accordion" id="accordionExample" style= "margin-top: 10px">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Current Status
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    2020 Record: 48-24 ... Lost to Heat in ECF
+                    
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Schedule
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    The Celtics 2020/2021 schedule is TBD...
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Fire Me Up
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Jayson Tatum up next
+                    <img src="https://i.pinimg.com/originals/a1/c8/fa/a1c8fa386ce9de47c70a41188e820b09.gif" alt="" height="600" width="1000"
+                    class="center">
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
