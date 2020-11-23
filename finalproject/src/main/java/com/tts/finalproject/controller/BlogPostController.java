@@ -31,14 +31,16 @@ public class BlogPostController {
 	public String index(BlogPost blogPost, Model model) {
 		
 		return "blogpost/index";
-    }
+	}
+	
     
 
 	@GetMapping(value = "/blogpost/new")
 	public String newBlog(BlogPost blogPost) {
 		posts.removeAll(posts);
 		return "blogpost/new";
-    }
+	}
+	
 
     
     @GetMapping(value = "/blogpost/patriots")
@@ -54,10 +56,12 @@ public class BlogPostController {
 	}
 
 
+
 	@RequestMapping("/teampic/pats")
 	public String  teamPicPats(){
 	return "teampic/pats";
 	}
+
 
 	
 	@GetMapping(value = "/blogpost/redsox")
@@ -74,10 +78,12 @@ public class BlogPostController {
 	}
 
 
+
 	@RequestMapping("/teampic/sox")
 	public String  teamPicSox(){
 	return "teampic/sox";
 	}
+
 
 
 	@GetMapping(value = "/blogpost/bruins")
@@ -94,10 +100,13 @@ public class BlogPostController {
 	}
 
 
+
 	@RequestMapping("/teampic/bs")
 	public String  teamPicBs(){
 	return "teampic/bs";
 	}
+
+
 
 	
 	@GetMapping(value = "/blogpost/celtics")
@@ -114,15 +123,20 @@ public class BlogPostController {
 	}
 
 
+
 	@RequestMapping("/teampic/cs")
 	public String  teamPicCs(){
 	return "teampic/cs";
 	}
 
+
+
 	@RequestMapping("/teampic/about")
 	public String  aboutSlide(){
 	return "teampic/about";
 	}
+
+
 
 
 	@PostMapping(value = "/blogpost")
@@ -159,13 +173,26 @@ public class BlogPostController {
 
 
 
+
+
 	@RequestMapping(value = "/blogpost/blogpost/delete/{id}")
 	public String deletePostWithId(@PathVariable Long id, BlogPost blogPost, Model model) {
 		blogPostRepository.deleteById(id);
 
 		return "blogpost/delete";
     }
-    
+	
+	
+
+
+
+
+
+
+
+
+
+	
 
 
 	@RequestMapping(value = "/blogpost/edit/{id}")

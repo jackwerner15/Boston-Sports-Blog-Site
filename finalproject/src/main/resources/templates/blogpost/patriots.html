@@ -31,7 +31,9 @@
       <h1>Boston Sports Blog Site</h1>
       <p class = "b">Wicked good reads</p>
     </div>
+
     <div th:replace="fragments/navbar :: navbar"></div>
+
     <div class="media" style= "margin-top: 10px">
         <img src="http://1.bp.blogspot.com/-TvXEpU0ewzQ/VCCzfMfLUcI/AAAAAAAAEzI/r9B48E-eA44/s1600/Logo%2BNew%2BEngland%2BPatriots.png" class="mr-3" alt="..." height = "60" width = "60">
         <div class="media-body">
@@ -60,7 +62,7 @@
   
             <div class="card-footer">
               <div class="form-group">
-                <!-- <a href="#" th:href="@{blogpost/edit/{id}(id=${blog.id})}" class="card-line btn btn-info">Edit Post</a> -->
+                
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                   Delete Post
                 </button>

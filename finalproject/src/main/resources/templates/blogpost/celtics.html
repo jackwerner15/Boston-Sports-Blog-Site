@@ -58,7 +58,7 @@
   
             <div class="card-footer">
               <div class="form-group">
-                <!-- <a href="#" th:href="@{blogpost/edit/{id}(id=${blog.id})}" class="card-line btn btn-info">Edit Post</a> -->
+                
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                   Delete Post
                 </button>
@@ -81,6 +81,7 @@
                   <h3 class="card-text" th:text="${blog.author}"></h3>
                   <p class="card-text" th:text="${blog.blogentry}"></p>
                 </div>
+                
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   <a href="#" th:href="@{blogpost/delete/{id}(id=${blog.id})}" class="card-link btn btn-danger">Delete
